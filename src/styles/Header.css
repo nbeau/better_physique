@@ -1,0 +1,25 @@
+.header_header {
+    padding-top: 100px;
+    position: relative;
+    height: 250px;
+    background-color:#d8d8d8;
+}
+
+.header_header h1 {
+    padding-left:40px;
+    color:#5b280a;
+    font: 44px "Trebuchet MS";
+}
+
+.header_svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+}
+
+.header_svg polygon {
+    position: absolute;
+    z-index:1;
+}

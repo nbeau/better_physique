@@ -1,0 +1,17 @@
+.textBox {
+    background-color: #e5b988;
+    width: 80%;
+    color: #633612;
+    padding: 20px;
+}
+
+.textBox_full {
+    background-color: #e5b988;
+    width: 100%;
+    color: #633612;
+    padding: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+    font-weight: 400px;
+}

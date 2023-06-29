@@ -1,0 +1,26 @@
+.nav_nav {
+    height: 90px;
+    background-color: #d8d8d8;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.nav_ul li {
+    margin-left: 20px;
+    font-size: 20px;
+    font-family:'Trebuchet MS';
+    font-weight: 500;
+}
+
+.nav_ul li a {
+    color: #5b280a;
+    text-decoration: none;
+}
+
+.nav_ul li a:hover {
+    color: #5b280a;
+    text-decoration: underline;
+}
+
+.nav_ul li a.active {
+    font-weight:700;
+}

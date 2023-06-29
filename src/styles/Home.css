@@ -1,0 +1,17 @@
+.container {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.home_spacing {
+    margin-right: 20% !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.home_arnold {
+    height: 50%;
+    width: 80%;
+    object-fit:cover;
+    object-position: center top;
+}
