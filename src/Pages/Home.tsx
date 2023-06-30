@@ -4,6 +4,7 @@ import TextBox from "../components/TextBox";
 import Text from "../components/Text";
 import arnold from "../images/arnold.png";
 import "../styles/Home.css"
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -32,10 +33,10 @@ function Home() {
                         </div>
                         <div className="row home_spacing">
                             <div className="col-6 d-flex justify-content-end">
-                                <a href="/training">
+                                <Link to="/training">
                                     Training
                                     {/* <Button text="Training" link="/training"/> */}
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-6 d-flex justify-content-start">
                                 <Button text="Dieting" link="/dieting" />
