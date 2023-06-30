@@ -32,7 +32,10 @@ function Home() {
                         </div>
                         <div className="row home_spacing">
                             <div className="col-6 d-flex justify-content-end">
-                                <Button text="Training" link="/training"/>
+                                <a href="/training">
+                                    Training
+                                    {/* <Button text="Training" link="/training"/> */}
+                                </a>
                             </div>
                             <div className="col-6 d-flex justify-content-start">
                                 <Button text="Dieting" link="/dieting" />
