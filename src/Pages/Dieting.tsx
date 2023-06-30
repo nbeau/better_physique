@@ -24,7 +24,7 @@ function Dieting() {
                 " />
             <div className="row row-cols-1 row-cols-lg-4 justify-content-center mt-5">
                 <div className="col-auto d-flex flex-row flex-lg-column justify-content-center px-5 py-2 px-lg-3 py-lg-0">
-                    <Button text="Bulking" link="/Dieting/Bulking"/>
+                    <Button text="Bulking" link="/better/Dieting/Bulking"/>
                     <Text centered={false} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -33,7 +33,7 @@ function Dieting() {
                         " />
                 </div>
                 <div className="col-auto d-flex flex-row flex-lg-column justify-content-center px-5 py-2 px-lg-3 py-lg-0">
-                    <Button text="Cutting" link="/Dieting/Cutting" />
+                    <Button text="Cutting" link="/better/Dieting/Cutting" />
                     <Text centered={false} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -42,7 +42,7 @@ function Dieting() {
                         " />
                 </div>
                 <div className="col-auto d-flex flex-row flex-lg-column justify-content-center px-5 py-2 px-lg-3 py-lg-0">
-                    <Button text="Maintaining" link="/Dieting/Maintaining" />
+                    <Button text="Maintaining" link="/better/Dieting/Maintaining" />
                     <Text centered={false} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
