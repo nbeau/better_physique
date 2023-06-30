@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import "../styles/NavBar.css"
+import logo from "../images/logo.png";
 
 function NavBar() {
     return (
@@ -15,7 +16,13 @@ function NavBar() {
                     <li className="nav-item">
                         <NavLink to="/Dieting">Dieting</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink to="/Analysis">Analysis</NavLink>
+                    </li>
                 </ul>
+                <a href="/">
+                    <img src={logo} className="nav_logo"></img>
+                </a>
             </div>
         </nav>
     );

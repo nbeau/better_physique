@@ -8,6 +8,7 @@ import Dieting from './Pages/Dieting';
 import Bulking from './Pages/Bulking';
 import Cutting from './Pages/Cutting';
 import Maintaining from './Pages/Maintaining';
+import Analysis from "./Pages/Analysis";
 import NavBar from './components/NavBar';
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
         <Route path="/Dieting" element={<Dieting />} />
         <Route path="/Dieting/Bulking" element={<Bulking />} />
         <Route path="/Dieting/Cutting" element={<Cutting />} />
-        <Route path="/DIeting/Maintaining" element={<Maintaining />} />
+        <Route path="/Dieting/Maintaining" element={<Maintaining />} />
+        <Route path="/Analysis" element={<Analysis />} />
       </Routes>
     </>
   );

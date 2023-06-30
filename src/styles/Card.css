@@ -1,4 +1,4 @@
-.exercise_container {
+.card_container {
     border: 1px solid rgb(178, 178, 178);
     border-radius: 10px;
     background-color: #d8d8d8;
@@ -7,7 +7,7 @@
     box-shadow: 2px 2px 5px grey;
 }
 
-.exercise_container img {
+.card_container img {
     align-self: center;
     height: 200px;
     max-width: 198px;
@@ -16,7 +16,7 @@
     border-top-right-radius: 9px;
 }
 
-.exercise_ratingNum {
+.card_ratingNum {
     font-size: 12px;
     display: flex;
     flex-direction: column;
@@ -24,15 +24,15 @@
     color: #5b280a;
 }
 
-.exercise_link {
+.card_link {
     text-decoration: none;
     color: #5b280a;
 }
 
-.exercise_link:hover {
+.card_link:hover {
     color: #b48a66;
 }
 
-.exercise_title {
+.card_title {
     color: #5b280a;
 }

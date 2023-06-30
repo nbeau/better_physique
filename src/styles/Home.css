@@ -10,8 +10,11 @@
 }
 
 .home_arnold {
-    height: 50%;
-    width: 80%;
+    position:absolute;
+    width: 500px;;
+    max-height: 800px;
+    top: 300px;
+    bottom:0%;
     object-fit:cover;
     object-position: center top;
 }
