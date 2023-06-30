@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "../styles/NavBar.css"
 import logo from "../images/logo.png";
 
@@ -20,9 +20,9 @@ function NavBar() {
                         <NavLink to="/analysis">Analysis</NavLink>
                     </li>
                 </ul>
-                <a href="/">
+                <Link to="/">
                     <img src={logo} className="nav_logo"></img>
-                </a>
+                </Link>
             </div>
         </nav>
     );

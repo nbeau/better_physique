@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Card.css";
 import Rating from '@mui/material/Rating';
 import bench from "../images/benchpress.jpeg";
+import { Link } from "react-router-dom";
 
 interface Props {
     img: string;
@@ -28,7 +29,7 @@ function Card(props: Props) {
                     <h5 className="mb-0 card_title">{props.title}</h5>
                     <hr className="mt-2 mb-1"></hr>
                     <div className="d-flex justify-content-center">
-                        <a className="card_link" href={"https://www.google.com/search?q=" + props.title} target="_blank">details</a>
+                        <Link className="card_link" to={"https://www.google.com/search?q=" + props.title} target="_blank">details</Link>
                     </div>
                 </div>
             </div>

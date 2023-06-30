@@ -1,5 +1,6 @@
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 import "../styles/Breadcrumbs.css";
+import { Link } from 'react-router-dom';
 
 const routes = [
     { path: '/', breadcrumb: 'home' },
@@ -21,10 +22,10 @@ function Breadcrumbs() {
     return (
         <h6 className="breadcrumbs_h6" >
             {breadcrumbs.map(({ match, breadcrumb }) => (
-                <a key={match.pathname} href={match.pathname}>
+                <Link key={match.pathname} to={match.pathname}>
                     <span> &gt; </span>
                     {breadcrumb}
-                </a>
+                </Link>
             ))}
         </h6>
     );
