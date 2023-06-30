@@ -2,7 +2,7 @@
   "name": "better",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://nbeau.github.io/",
+  "homepage": "https://nbeau.github.io/#",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

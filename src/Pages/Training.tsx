@@ -21,7 +21,7 @@ function Training() {
                 " />
             <div className="row row-cols-1 row-cols-lg-4 justify-content-center mt-5">
                 <div className="col-auto d-flex flex-row flex-lg-column justify-content-center px-5 py-2 px-lg-3 py-lg-0">
-                    <Button text="Stength" link="/Training/Strength"/>
+                    <Button text="Stength" link="/training/strength"/>
                     <Text centered={false} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -30,7 +30,7 @@ function Training() {
                         " />
                 </div>
                 <div className="col-auto d-flex flex-row flex-lg-column justify-content-center px-5 py-2 px-lg-3 py-lg-0">
-                    <Button text="Hypertrophy" link="/Training/Hypertrophy" />
+                    <Button text="Hypertrophy" link="/training/hypertrophy" />
                     <Text centered={false} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -39,7 +39,7 @@ function Training() {
                         " />
                 </div>
                 <div className="col-auto d-flex flex-row flex-lg-column justify-content-center px-5 py-2 px-lg-3 py-lg-0">
-                    <Button text="Endurance" link="/Training/Endurance" />
+                    <Button text="Endurance" link="/training/endurance" />
                     <Text centered={false} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 

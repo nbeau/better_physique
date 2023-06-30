@@ -17,15 +17,15 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Training" element={<Training />} />
-        <Route path="/Training/Strength" element={<Strength />} />
-        <Route path="/Training/Hypertrophy" element={<Hypertrophy />} />
-        <Route path="/Training/Endurance" element={<Endurance />} />
-        <Route path="/Dieting" element={<Dieting />} />
-        <Route path="/Dieting/Bulking" element={<Bulking />} />
-        <Route path="/Dieting/Cutting" element={<Cutting />} />
-        <Route path="/Dieting/Maintaining" element={<Maintaining />} />
-        <Route path="/Analysis" element={<Analysis />} />
+        <Route path="/training" element={<Training />} />
+        <Route path="/training/strength" element={<Strength />} />
+        <Route path="/training/hypertrophy" element={<Hypertrophy />} />
+        <Route path="/training/endurance" element={<Endurance />} />
+        <Route path="/dieting" element={<Dieting />} />
+        <Route path="/dieting/bulking" element={<Bulking />} />
+        <Route path="/dieting/cutting" element={<Cutting />} />
+        <Route path="/dieting/maintaining" element={<Maintaining />} />
+        <Route path="/analysis" element={<Analysis />} />
       </Routes>
     </>
   );

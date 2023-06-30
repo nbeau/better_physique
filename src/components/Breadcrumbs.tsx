@@ -1,11 +1,18 @@
-import { Link } from 'react-router-dom';
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 import "../styles/Breadcrumbs.css";
 
 const routes = [
     { path: '/', breadcrumb: 'home' },
     { path: '/training', breadcrumb: 'training' },
-    { path: '/dieting', breadcrumb: 'dieting' }
+    { path: '/dieting', breadcrumb: 'dieting' },
+    { path: '/analysis', breadcrumb: 'analysis' },
+    { path: '/training/strength', breadcrumb: 'strength' },
+    { path: '/training/hypertrophy', breadcrumb: 'hypertrophy' },
+    { path: '/training/endurance', breadcrumb: 'endurance' },
+    { path: '/dieting/bulking', breadcrumb: 'bulking' },
+    { path: '/dieting/cutting', breadcrumb: 'cutting' },
+    { path: '/dieting/maintaining', breadcrumb: 'maintaining' },
+
 ];
 
 function Breadcrumbs() {
