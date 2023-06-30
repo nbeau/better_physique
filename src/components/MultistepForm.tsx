@@ -35,7 +35,7 @@ function MultistepForm() {
             return { ...prev, ...fields }
         })
     }
-    const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
+    const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next } =
         useMultistepForm([
             <PhysicalForm {...data} updateFields={updateFields} />,
             <ActivityForm {...data} updateFields={updateFields} />,
@@ -45,7 +45,7 @@ function MultistepForm() {
 
     function onSubmit(e: FormEvent) {
         e.preventDefault()
-        if (isLastStep) {
+        if (isThirdStep) {
             var num = 0
             var diff = 0
             switch (data.goal) {
@@ -94,6 +94,9 @@ function MultistepForm() {
             num = num + diff
             updateFields({ cals: Math.round(num).toString() })
         }
+        if (isLastStep) {
+            return back()
+        }
         return next()
 }
 
@@ -103,12 +106,20 @@ return (
             {step}
             <div className="form_bottom">
                 {!isFirstStep && (
-                    <button type="button" onClick={back}>
-                        Back
+                    <button className="form_button" type="button" onClick={back}>
+                        <span>
+                            Back
+                        </span>
                     </button>
                 )}
-                {currentStepIndex + 1} / {steps.length}
-                <button type="submit">{isLastStep ? "Results" : "Next"}</button>
+                <div className="d-flex flex-column justify-content-center">
+                    {currentStepIndex + 1} / {steps.length}
+                </div>
+                <button className="form_button" type="submit">
+                    <span>
+                        {isLastStep ? "Back" : (isThirdStep ? "Submit" : "Next")}
+                    </span>
+                </button>
             </div>
         </form>
     </div>

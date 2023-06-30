@@ -13,7 +13,9 @@ export function Results({
             <div className="row mb-4">
                 <h2>Results!</h2>
             </div>
-            <Text centered={true} text={`You need to consume an average of about ${cals} Calories per day in order to reach your goal!`} />
+            <div className="mt-5">
+                <Text centered={true} text={`You need to consume an average of about ${cals} Calories per day in order to reach your goal!`} />
+            </div>
         </div>
     )
 }
