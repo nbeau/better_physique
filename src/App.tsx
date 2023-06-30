@@ -16,16 +16,16 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path="/better" element={<Home />} />
-        <Route path="/better/Training" element={<Training />} />
-        <Route path="/better/Training/Strength" element={<Strength />} />
-        <Route path="/better/Training/Hypertrophy" element={<Hypertrophy />} />
-        <Route path="/better/Training/Endurance" element={<Endurance />} />
-        <Route path="/better/Dieting" element={<Dieting />} />
-        <Route path="/better/Dieting/Bulking" element={<Bulking />} />
-        <Route path="/better/Dieting/Cutting" element={<Cutting />} />
-        <Route path="/better/Dieting/Maintaining" element={<Maintaining />} />
-        <Route path="/better/Analysis" element={<Analysis />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Training" element={<Training />} />
+        <Route path="/Training/Strength" element={<Strength />} />
+        <Route path="/Training/Hypertrophy" element={<Hypertrophy />} />
+        <Route path="/Training/Endurance" element={<Endurance />} />
+        <Route path="/Dieting" element={<Dieting />} />
+        <Route path="/Dieting/Bulking" element={<Bulking />} />
+        <Route path="/Dieting/Cutting" element={<Cutting />} />
+        <Route path="/Dieting/Maintaining" element={<Maintaining />} />
+        <Route path="/Analysis" element={<Analysis />} />
       </Routes>
     </>
   );

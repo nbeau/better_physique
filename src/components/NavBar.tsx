@@ -8,16 +8,16 @@ function NavBar() {
             <div className="container-fluid">
                 <ul className="navbar-nav flex-row nav_ul">
                     <li className="nav-item">
-                        <NavLink to="/better">Home</NavLink>
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/better/Training">Training</NavLink>
+                        <NavLink to="/Training">Training</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/better/Dieting">Dieting</NavLink>
+                        <NavLink to="/Dieting">Dieting</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/better/Analysis">Analysis</NavLink>
+                        <NavLink to="/Analysis">Analysis</NavLink>
                     </li>
                 </ul>
                 <a href="/">
