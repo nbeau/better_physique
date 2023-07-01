@@ -10,10 +10,12 @@
     type: ,
 },
 */
+import benchpress from "../images/benchpress.jpeg"
+
 export const exercises = [
     {
         title: "Bench Press",
-        img: "/src/images/benchpress.jpeg",
+        img: benchpress,
         rating: 5,
         rating_num: 5.6,
         strength: true,
