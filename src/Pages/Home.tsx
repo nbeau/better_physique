@@ -39,6 +39,17 @@ function Home() {
                                 <Button text="Dieting" link="/dieting" />
                             </div>
                         </div>
+                        <div className="row home_spacing pt-3 mt-4">
+                            <div className="col justify-content-center">
+                                <Text centered={true} text="How many Calories should you be eating?"/>
+                            </div>
+                        </div>
+                        <div className="row home_spacing justify-content-center">
+                            <div className="col-auto">
+                                <Button text="Analysis" link="/analysis"/>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

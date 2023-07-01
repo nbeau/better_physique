@@ -19,7 +19,7 @@ function Contact() {
                         sint occaecat cupidatat non proident, sunt in culpa qui 
                         officia deserunt mollit anim id est laborum.
                         " />
-                        <br/>
+                        <br/><br/>
                         <Text centered={true} text="
                         If you have any questions or would like to speak directly 
                         with a professional for advice, you can call us or send us an email

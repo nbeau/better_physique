@@ -15,6 +15,7 @@ type FormData = {
     activity: string
     goal: string
     cals: string
+    protein: string
 }
 
 const INITIAL_DATA: FormData = {
@@ -25,7 +26,8 @@ const INITIAL_DATA: FormData = {
     weight: "",
     activity: "mid",
     goal: "maintain",
-    cals: ""
+    cals: "",
+    protein: "",
 }
 
 function MultistepForm() {
@@ -90,9 +92,9 @@ function MultistepForm() {
                     break;
                 }
             }
-
             num = num + diff
             updateFields({ cals: Math.round(num).toString() })
+            updateFields({ protein: Math.round(Number(data.weight) * 0.8).toString() })
         }
         if (isLastStep) {
             return back()
