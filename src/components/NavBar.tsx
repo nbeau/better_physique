@@ -6,7 +6,7 @@ function NavBar() {
     return (
         <nav className="nav_nav navbar fixed-top ">
             <div className="container-fluid">
-                <ul className="navbar-nav flex-row nav_ul">
+                <ul className="navbar-nav flex-row nav_ul gx-3">
                     <li className="nav-item">
                         <NavLink to="/">Home</NavLink>
                     </li>
@@ -18,6 +18,9 @@ function NavBar() {
                     </li>
                     <li className="nav-item">
                         <NavLink to="/analysis">Analysis</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/contact">Contact Us</NavLink>
                     </li>
                 </ul>
                 <Link to="/">
