@@ -1,4 +1,9 @@
-.box {
-    width: 300px;
-    height: 100px;
+.hypertrophy_box {
+    margin-right: 20px;
+}
+
+.hypertrophy_box p {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 120px;
 }
