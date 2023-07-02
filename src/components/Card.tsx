@@ -17,7 +17,7 @@ function Card(props: Props) {
 
     return (
         <div className="col-auto d-flex flex-row justify-content-center">
-            <div className="card_container">
+            <div className="card_container d-flex flex-column">
                 <img src={props.img}></img>
                 <div className="p-2">
                     <span className="d-flex flex-row">
@@ -27,7 +27,9 @@ function Card(props: Props) {
                         </div>
                     </span>
                     <h5 className="mb-0 card_title">{props.title}</h5>
-                    <hr className="mt-2 mb-1"></hr>
+                </div>
+                <div className="mt-auto px-2 mb-2" >
+                    <hr className="mb-1"></hr>
                     <div className="d-flex justify-content-center">
                         <Link className="card_link" to={"https://www.google.com/search?q=" + props.title} target="_blank">details</Link>
                     </div>

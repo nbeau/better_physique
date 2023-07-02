@@ -2,9 +2,14 @@
     border: 1px solid rgb(178, 178, 178);
     border-radius: 10px;
     background-color: #d8d8d8;
-    height: 300px;
+    height: auto;
     width: 200px;
     box-shadow: 2px 2px 5px grey;
+}
+
+.card_footer {
+    position: absolute;
+    bottom: 0;
 }
 
 .card_container img {

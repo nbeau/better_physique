@@ -51,7 +51,7 @@ function Maintaining() {
                     </div>
                 </div>
             </div>
-            <div className="row m-2">
+            <div className="row m-2 mb-5 gy-3">
                 {recipes.map((e) => (
                     e.type === "maintaining" && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
                 ))}

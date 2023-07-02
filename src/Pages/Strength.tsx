@@ -39,7 +39,7 @@ function Strength() {
                     <Text centered={false} text="Here are a few good exercises for strength:" />
                 </div>
             </div>
-            <div className="row m-2 mb-5">
+            <div className="row m-2 mb-5 gy-3">
                 {exercises.map((e) => (
                     e.strength && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
                 ))}
