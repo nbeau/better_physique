@@ -10,31 +10,24 @@ function Endurance() {
     return (
         <>
             <Header heading="Endurance" />
-            <div className="row row-cols-1 ms-5 mt-5 gy-4">
-                <div className="col d-flex flex-row">
-                    <div className="endurance_box">
-                        <TextBox full={false} text="Rep range" />
-                    </div>
-                    <Text centered={false} text="
+            <div className="row row-cols-1 ms-5 mt-2 mb-3 gy-4 me-5">
+                <div className="col">
+                    <Text centered={true} text="
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
                         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        " />
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit 
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+                        sint occaecat cupidatat non proident, sunt in culpa qui 
+                        officia deserunt mollit anim id est laborum.
+                    " />
                 </div>
-                <div className="col d-flex flex-row">
-                    <div className="endurance_box">
-                        <TextBox full={false} text="Weight" />
-                    </div>
-                    <Text centered={false} text="
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna 
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        " />
-                 </div>
+                <div className="col">
+                    <Text centered={false} text="Here are some good exercises for endurance:" />
+                </div>
             </div>
-            <div className="row m-2">
+            <div className="row m-2 mb-5">
                 {exercises.map((e) => (
                     e.endurance && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
                 ))}

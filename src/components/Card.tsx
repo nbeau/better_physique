@@ -16,7 +16,7 @@ function Card(props: Props) {
 
 
     return (
-        <div className="col d-flex flex-row justify-content-center">
+        <div className="col-auto d-flex flex-row justify-content-center">
             <div className="card_container">
                 <img src={props.img}></img>
                 <div className="p-2">

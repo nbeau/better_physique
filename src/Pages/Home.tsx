@@ -41,7 +41,7 @@ function Home() {
                         </div>
                         <div className="row home_spacing pt-3 mt-4">
                             <div className="col justify-content-center">
-                                <Text centered={true} text="How many Calories should you be eating?"/>
+                                <Text centered={true} text="Answer a few short questions to receive personalized advice for your fitness journey!"/>
                             </div>
                         </div>
                         <div className="row home_spacing justify-content-center">

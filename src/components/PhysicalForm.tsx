@@ -26,11 +26,11 @@ export function PhysicalForm({
                 <h2>Step 1: Physical Data</h2>
             </div>
             <div className="row mt-4">
-                <div className="col-3">
+                <div className="col-3 d-flex flex-row justify-content-end">
                     <label>sex</label>
                 </div>
                 <div className="col-9 d-flex">
-                <div className="radio me-3">
+                    <div className="radio me-3">
                         <label>
                             <input className="me-1" name="sex" type="radio" value="male" checked={sex === "male" || sex === ""} onChange={e => updateFields({ sex: e.target.value })} />
                             Male
@@ -45,7 +45,7 @@ export function PhysicalForm({
                 </div>
             </div>
             <div className="row mt-3">
-                <div className="col-3">
+                <div className="col-3 d-flex flex-row justify-content-end">
                     <label>age</label>
                 </div>
                 <div className="col-9 d-flex">
@@ -55,7 +55,7 @@ export function PhysicalForm({
                 </div>
             </div>
             <div className="row mt-3">
-                <div className="col-3">
+                <div className="col-3 d-flex flex-row justify-content-end">
                     <label>height</label>
                 </div>
                 <div className="col-9 d-flex">
@@ -66,7 +66,7 @@ export function PhysicalForm({
                 </div>
             </div>
             <div className="row mt-3">
-                <div className="col-3">
+                <div className="col-3 d-flex flex-row justify-content-end">
                     <label>weight</label>
                 </div>
                 <div className="col-9 d-flex">

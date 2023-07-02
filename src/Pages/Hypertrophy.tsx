@@ -10,7 +10,7 @@ function Hypertrophy() {
     return (
         <>
             <Header heading="Hypertrophy" />
-            <div className="row row-cols-1 ms-5 mt-5 gy-4">
+            <div className="row row-cols-1 ms-5 mt-5 mb-3 gy-4 me-5">
                 <div className="col d-flex flex-row">
                     <div className="hypertrophy_box">
                         <TextBox full={false} text="Rep range" />
@@ -32,9 +32,12 @@ function Hypertrophy() {
                         aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                         ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         " />
-                 </div>
+                </div>
+                <div className="col">
+                    <Text centered={false} text="Here are some good exercises for hypertrophy:" />
+                </div>
             </div>
-            <div className="row m-2">
+            <div className="row m-2 mb-5 gy-3">
                 {exercises.map((e) => (
                     e.hypertrophy && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
                 ))}
