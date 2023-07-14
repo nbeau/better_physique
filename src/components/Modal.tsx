@@ -212,6 +212,7 @@ function Modal({ search, closeModal }:Props) {
                 <div className="row m-2 mb-5 gy-3">
                     <span className="modal_resultsSpan"><h5 className="m-0 mt-2">Results</h5> (sorted by rating)</span>
                     {(data.search === "exercises" && exercises.map((e) => (
+                        (e.title.toLowerCase().includes(search.toLowerCase()) && 
                         (data.split === e.type || data.split === "any") &&
                         (data.exercise_goal === "any" && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
                         ||
@@ -220,10 +221,12 @@ function Modal({ search, closeModal }:Props) {
                         (data.exercise_goal === "hypertrophy" && e.hypertrophy && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
                         ||
                         (data.exercise_goal === "endurance" && e.endurance && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
-                        ))
+                        )))
                     )) || (data.search === "recipes" && recipes.map((e) => (
+                        (e.title.toLowerCase().includes(search.toLowerCase()) &&
                         (data.dieting_goal === e.type || data.dieting_goal === "any") &&
                         <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
+                        )
                     )))}
                 </div>
             </div>

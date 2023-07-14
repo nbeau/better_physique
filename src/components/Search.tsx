@@ -8,7 +8,14 @@ function Search() {
 
     return (
         <>
-            <input className="search" placeholder="Find Exercises or Recipes" onChange={e => setSearch(e.target.value)} onClick={() => {setOpenModal(true)}}></input>
+        <div className="search">
+            <input placeholder="Find Exercises or Recipes" onChange={e => setSearch(e.target.value)} onClick={() => {setOpenModal(true)}}></input>
+            <div className="search_icon">
+                <i className="fa fa-search"></i>
+            </div>
+            
+        </div>
+            
             {openModal && <Modal search={search} closeModal={setOpenModal}/>}
         </>
     );
