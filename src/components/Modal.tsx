@@ -32,11 +32,11 @@ function Modal({ search, closeModal }:Props) {
                 <div className="modal_close">
                     <button onClick={() => closeModal(false)}> X </button>
                 </div>
-                <div className="modal_title">
-                    <h1>Find Exercises or Recipes</h1>
-                </div>
                 <div className="row border-bottom pb-4">
                     <div className="col-6 border-end position-relative">
+                        <div className="modal_title">
+                            <h1>Find Exercises</h1>
+                        </div>
                         <h6 className="mt-3">Exercising Goal</h6>
                         
                         <div className="radio ms-3">
@@ -89,7 +89,7 @@ function Modal({ search, closeModal }:Props) {
                         <h6 className="mt-3">Split</h6>
                         <div className="radio ms-3">
                             <label>
-                                <input className="me-1" name="split" type="radio" value="push" checked={data.split === "push"} 
+                                <input className="me-1" name="split" type="radio" value="push" disabled={data.exercise_goal === "endurance"} checked={data.exercise_goal !== "endurance" && data.split === "push"} 
                                     onChange={e => {
                                         setData(prevState => ({
                                             ...prevState, 
@@ -101,7 +101,7 @@ function Modal({ search, closeModal }:Props) {
                         </div>
                         <div className="radio ms-3">
                             <label>
-                                <input className="me-1" name="split" type="radio" value="pull" checked={data.split === "pull"} 
+                                <input className="me-1" name="split" type="radio" value="pull" disabled={data.exercise_goal === "endurance"} checked={data.exercise_goal !== "endurance" && data.split === "pull"} 
                                     onChange={e => {
                                         setData(prevState => ({
                                             ...prevState, 
@@ -113,7 +113,7 @@ function Modal({ search, closeModal }:Props) {
                         </div>
                         <div className="radio ms-3">
                             <label>
-                                <input className="me-1" name="split" type="radio" value="legs" checked={data.split === "legs"} 
+                                <input className="me-1" name="split" type="radio" value="legs" disabled={data.exercise_goal === "endurance"} checked={data.exercise_goal !== "endurance" && data.split === "legs"} 
                                     onChange={e => {
                                         setData(prevState => ({
                                             ...prevState, 
@@ -124,7 +124,7 @@ function Modal({ search, closeModal }:Props) {
                             </label>
                         </div><div className="radio ms-3">
                             <label>
-                                <input className="me-1" name="split" type="radio" value="any" checked={data.split === "any"} 
+                                <input className="me-1" name="split" type="radio" value="any" disabled={data.exercise_goal === "endurance"} checked={data.exercise_goal === "endurance" || data.split === "any"} 
                                     onChange={e => {
                                         setData(prevState => ({
                                             ...prevState, 
@@ -147,7 +147,10 @@ function Modal({ search, closeModal }:Props) {
                         </div>
                     </div>
                     <div className="col-6 position-relative">
-                    <h6 className="mt-3">Dieting Goal</h6>
+                        <div className="modal_title">
+                            <h1>Find Recipes</h1>
+                        </div>
+                        <h6 className="mt-3">Dieting Goal</h6>
                         <div className="radio ms-3">
                             <label>
                                 <input className="me-1" name="dieting_goal" type="radio" value="bulking" checked={data.dieting_goal === "bulking"} 
@@ -212,14 +215,14 @@ function Modal({ search, closeModal }:Props) {
                 <div className="row m-2 mb-5 gy-3">
                     <span className="modal_resultsSpan"><h5 className="m-0 mt-2">Results</h5> (sorted by rating)</span>
                     {(data.search === "exercises" && exercises.map((e) => (
-                        (e.title.toLowerCase().includes(search.toLowerCase()) && 
+                        (e.title.toLowerCase().includes(search.toLowerCase()) && (
                         (data.split === e.type || data.split === "any") &&
                         (data.exercise_goal === "any" && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
                         ||
                         (data.exercise_goal === "strength" && e.strength && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
                         ||
                         (data.exercise_goal === "hypertrophy" && e.hypertrophy && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
-                        ||
+                        ) ||
                         (data.exercise_goal === "endurance" && e.endurance && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
                         )))
                     )) || (data.search === "recipes" && recipes.map((e) => (

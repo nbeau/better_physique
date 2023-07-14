@@ -23,9 +23,6 @@
     padding: 25px;
     overscroll-behavior: contain;
     overflow: auto;
-}
-
-.modal_container {
     color: #5b280a;
     font-weight: 600;
 }
@@ -44,6 +41,7 @@
 }
 
 .modal_title {
+    width: 100%;
     display: inline-block;
     text-align: center;
     margin-top: -10px
