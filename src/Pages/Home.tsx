@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 function Home() {
     return (
         <>
-            <Header heading="Become a gym bro" />
+            <Header heading="Build a Better Physique" />
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-6 d-flex justify-content-center">

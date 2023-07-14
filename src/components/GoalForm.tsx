@@ -17,7 +17,7 @@ export function GoalForm({
             <div className="row">
                 <h2>Step 3: What is your goal?</h2>
             </div>
-            <div className="row mt-4 justify-content-center">
+            <div className="row mt-5 pt-3 justify-content-center">
                 <div className="col-9 d-flex flex-column">
                     <div className="radio mb-3">
                         <label>

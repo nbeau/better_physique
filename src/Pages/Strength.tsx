@@ -4,8 +4,6 @@ import Text from "../components/Text";
 import Card from "../components/Card";
 import "../styles/Strength.css";
 
-import bench from "../images/benchpress.jpeg";
-
 import { exercises } from "../components/Exercises";
 
 function Strength() {

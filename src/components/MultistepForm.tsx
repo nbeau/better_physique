@@ -103,7 +103,7 @@ function MultistepForm() {
 }
 
 return (
-    <div className="form_container">
+    <div className="form_container mx-4">
         <form onSubmit={onSubmit}>
             {step}
             <div className="form_bottom">

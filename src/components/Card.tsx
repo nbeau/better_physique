@@ -20,7 +20,7 @@ function Card(props: Props) {
             <div className="card_container d-flex flex-column">
                 <img src={props.img}></img>
                 <div className="p-2">
-                    <span className="d-flex flex-row">
+                    <span className="d-flex flex-row card_rating">
                         <Rating name="name" value={value} onChange={(event, newValue) => {setValue(newValue);}}/>
                         <div className="card_ratingNum">
                             &ensp;{props.rating_num}k

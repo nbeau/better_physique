@@ -1,0 +1,12 @@
+faceted search
+replace text
+implement bilingual
+implement screen reader accessibility
+limit number of recipes/exercises with 'show more'
+don't use google search
+add metric system for form
+back button -> restart form (confirm restart)
+non-existant page handling (link to home)
+add images
+add icons for unfamiliar terms
+stop invalid inputs

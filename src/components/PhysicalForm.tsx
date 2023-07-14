@@ -44,7 +44,7 @@ export function PhysicalForm({
                     </div>
                 </div>
             </div>
-            <div className="row mt-3">
+            <div className="row mt-4">
                 <div className="col-3 d-flex flex-row justify-content-end">
                     <label>age</label>
                 </div>
@@ -54,7 +54,7 @@ export function PhysicalForm({
                     </div>
                 </div>
             </div>
-            <div className="row mt-3">
+            <div className="row mt-4">
                 <div className="col-3 d-flex flex-row justify-content-end">
                     <label>height</label>
                 </div>
@@ -65,7 +65,7 @@ export function PhysicalForm({
                     </div>
                 </div>
             </div>
-            <div className="row mt-3">
+            <div className="row mt-4">
                 <div className="col-3 d-flex flex-row justify-content-end">
                     <label>weight</label>
                 </div>
