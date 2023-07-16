@@ -19,17 +19,17 @@ function App() {
     <>
       <NavBar lang={lang} setLang={setLang} />
       <Routes>
-        <Route path="/" element={<Home lang={lang} setLang={setLang} />} />
-        <Route path="/training" element={<Training lang={lang} setLang={setLang} />} />
-        <Route path="/training/strength" element={<Strength lang={lang} setLang={setLang} />} />
-        <Route path="/training/hypertrophy" element={<Hypertrophy lang={lang} setLang={setLang} />} />
-        <Route path="/training/endurance" element={<Endurance lang={lang} setLang={setLang} />} />
-        <Route path="/dieting" element={<Dieting lang={lang} setLang={setLang} />} />
-        <Route path="/dieting/bulking" element={<Bulking lang={lang} setLang={setLang} />} />
-        <Route path="/dieting/cutting" element={<Cutting lang={lang} setLang={setLang} />} />
-        <Route path="/dieting/maintaining" element={<Maintaining lang={lang} setLang={setLang} />} />
-        <Route path="/analysis" element={<Analysis lang={lang} setLang={setLang} />} />
-        <Route path="/contact" element={<Contact lang={lang} setLang={setLang} />} />
+        <Route path="/" element={<Home lang={lang}/>} />
+        <Route path="/training" element={<Training lang={lang} />} />
+        <Route path="/training/strength" element={<Strength lang={lang} />} />
+        <Route path="/training/hypertrophy" element={<Hypertrophy lang={lang} />} />
+        <Route path="/training/endurance" element={<Endurance lang={lang} />} />
+        <Route path="/dieting" element={<Dieting lang={lang} />} />
+        <Route path="/dieting/bulking" element={<Bulking lang={lang} />} />
+        <Route path="/dieting/cutting" element={<Cutting lang={lang} />} />
+        <Route path="/dieting/maintaining" element={<Maintaining lang={lang} />} />
+        <Route path="/analysis" element={<Analysis lang={lang} />} />
+        <Route path="/contact" element={<Contact lang={lang} />} />
       </Routes>
     </>
   );
