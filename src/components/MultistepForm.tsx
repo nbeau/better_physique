@@ -44,9 +44,9 @@ function MultistepForm({ lang }:Props) {
     const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next } =
         useMultistepForm([
             <PhysicalForm {...data} updateFields={updateFields} lang={lang}/>,
-            <ActivityForm {...data} updateFields={updateFields} />,
-            <GoalForm {...data} updateFields={updateFields} />,
-            <Results {...data} />
+            <ActivityForm {...data} updateFields={updateFields} lang={lang}/>,
+            <GoalForm {...data} updateFields={updateFields} lang={lang}/>,
+            <Results {...data} lang={lang}/>
         ])
 
     function onSubmit(e: FormEvent) {

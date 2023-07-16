@@ -2,13 +2,10 @@
 2 add metric system for form
 1 non-existant page handling (link to home)
 3 don't use google search
-3 report
-1 stop invalid inputs
 1 french card titles
 1 back button -> restart form (confirm restart)
-2 limit number of recipes/exercises with 'show more'
 5 add images
-2 add icons for unfamiliar terms
 5 mobile responsive
+3 report
 
-estimated hours left: 29
+estimated hours left: 24/19/14
