@@ -6,13 +6,13 @@ interface Props {
     link: string;
 }
 
-function Button (props: Props) {
+function Button ({ text, link }:Props) {
 
     return (
-        <Link to={props.link}>
+        <Link to={link}>
             <button className="button_button">
                 <span>
-                    {props.text}
+                    {text}
                 </span>
             </button>
         </Link>

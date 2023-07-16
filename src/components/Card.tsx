@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Card.css";
 import Rating from '@mui/material/Rating';
-import bench from "../images/benchpress.jpeg";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -9,29 +8,30 @@ interface Props {
     rating: number;
     rating_num: number;
     title: string;
+    lang: string;
 }
 
-function Card(props: Props) {
-    const [value, setValue] = React.useState<number | null>(props.rating);
+function Card({ img, rating, rating_num, title, lang }:Props) {
+    const [value, setValue] = React.useState<number | null>(rating);
 
 
     return (
         <div className="col-auto d-flex flex-row justify-content-center">
             <div className="card_container d-flex flex-column">
-                <img src={props.img}></img>
+                <img src={img}></img>
                 <div className="p-2">
                     <span className="d-flex flex-row card_rating">
                         <Rating name="name" value={value} onChange={(event, newValue) => {setValue(newValue);}}/>
                         <div className="card_ratingNum">
-                            &ensp;{props.rating_num}k
+                            &ensp;{rating_num}k
                         </div>
                     </span>
-                    <h5 className="mb-0 card_title">{props.title}</h5>
+                    <h5 className="mb-0 card_title">{title}</h5>
                 </div>
                 <div className="mt-auto px-2 mb-2" >
-                    <hr className="mb-1"></hr>
+                    <hr className="m-0 mb-1"></hr>
                     <div className="d-flex justify-content-center">
-                        <Link className="card_link" to={"https://www.google.com/search?q=" + props.title} target="_blank">details</Link>
+                        <Link className="card_link" to={"https://www.google.com/search?q=" + title} target="_blank">{lang === "english" ? "details" : "détails"}</Link>
                     </div>
                 </div>
             </div>

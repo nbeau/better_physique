@@ -3,14 +3,15 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 interface Props {
     heading: String;
+    lang: string;
 }
 
-function Header(props: Props) {
+function Header({ heading, lang }:Props) {
 
     return (
         <header className="header_header">
-            <Breadcrumbs />
-            <h1>{props.heading}</h1>
+            <Breadcrumbs lang={lang} />
+            <h1>{heading}</h1>
                 <svg className="header_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="white" points="0 100,100 100,100 50"/>
                 </svg>

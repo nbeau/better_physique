@@ -11,23 +11,25 @@ import Maintaining from './Pages/Maintaining';
 import Analysis from "./Pages/Analysis";
 import Contact from "./Pages/Contact";
 import NavBar from './components/NavBar';
+import { useState } from 'react';
 
 function App() {
+  const [lang, setLang] = useState("english");
   return (
     <>
-      <NavBar />
+      <NavBar lang={lang} setLang={setLang} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/training" element={<Training />} />
-        <Route path="/training/strength" element={<Strength />} />
-        <Route path="/training/hypertrophy" element={<Hypertrophy />} />
-        <Route path="/training/endurance" element={<Endurance />} />
-        <Route path="/dieting" element={<Dieting />} />
-        <Route path="/dieting/bulking" element={<Bulking />} />
-        <Route path="/dieting/cutting" element={<Cutting />} />
-        <Route path="/dieting/maintaining" element={<Maintaining />} />
-        <Route path="/analysis" element={<Analysis />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home lang={lang} setLang={setLang} />} />
+        <Route path="/training" element={<Training lang={lang} setLang={setLang} />} />
+        <Route path="/training/strength" element={<Strength lang={lang} setLang={setLang} />} />
+        <Route path="/training/hypertrophy" element={<Hypertrophy lang={lang} setLang={setLang} />} />
+        <Route path="/training/endurance" element={<Endurance lang={lang} setLang={setLang} />} />
+        <Route path="/dieting" element={<Dieting lang={lang} setLang={setLang} />} />
+        <Route path="/dieting/bulking" element={<Bulking lang={lang} setLang={setLang} />} />
+        <Route path="/dieting/cutting" element={<Cutting lang={lang} setLang={setLang} />} />
+        <Route path="/dieting/maintaining" element={<Maintaining lang={lang} setLang={setLang} />} />
+        <Route path="/analysis" element={<Analysis lang={lang} setLang={setLang} />} />
+        <Route path="/contact" element={<Contact lang={lang} setLang={setLang} />} />
       </Routes>
     </>
   );

@@ -30,7 +30,11 @@ const INITIAL_DATA: FormData = {
     protein: "",
 }
 
-function MultistepForm() {
+interface Props {
+    lang: string;
+}
+
+function MultistepForm({ lang }:Props) {
     const [data, setData] = useState(INITIAL_DATA)
     function updateFields(fields: Partial<FormData>) {
         setData(prev => {
@@ -39,7 +43,7 @@ function MultistepForm() {
     }
     const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next } =
         useMultistepForm([
-            <PhysicalForm {...data} updateFields={updateFields} />,
+            <PhysicalForm {...data} updateFields={updateFields} lang={lang}/>,
             <ActivityForm {...data} updateFields={updateFields} />,
             <GoalForm {...data} updateFields={updateFields} />,
             <Results {...data} />
@@ -110,7 +114,7 @@ return (
                 {!isFirstStep && (
                     <button className="form_button" type="button" onClick={back}>
                         <span>
-                            Back
+                            {lang === "english" ? "Back" : "Retour"}
                         </span>
                     </button>
                 )}
@@ -119,7 +123,7 @@ return (
                 </div>
                 <button className="form_button" type="submit">
                     <span>
-                        {isLastStep ? "Back" : (isThirdStep ? "Submit" : "Next")}
+                        {isLastStep ? (lang === "english" ? "Back" : "Retour") : (isThirdStep ? (lang === "english" ? "Submit" : "Soumettre") : (lang === "english" ? "Next" : "Prochain"))}
                     </span>
                 </button>
             </div>

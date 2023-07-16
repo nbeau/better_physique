@@ -22,9 +22,10 @@ const INITIAL_DATA: Data = {
 interface Props {
     search: string;
     closeModal: (val: boolean) => void;
+    lang: string;
 }
 
-function Modal({ search, closeModal }:Props) {
+function Modal({ search, closeModal, lang }:Props) {
     const [data, setData] = useState(INITIAL_DATA);
     return (
         <div className="modal_background">
@@ -35,10 +36,9 @@ function Modal({ search, closeModal }:Props) {
                 <div className="row border-bottom pb-4">
                     <div className="col-6 border-end position-relative">
                         <div className="modal_title">
-                            <h1>Find Exercises</h1>
+                            <h1>{lang === "english" ? "Find Exercises" : "Trouver des exercices"}</h1>
                         </div>
-                        <h6 className="mt-3">Exercising Goal</h6>
-                        
+                        <h6 className="mt-3">{lang === "english" ? "Exercising Goal" : "Objectif de l'exercice"}</h6>
                         <div className="radio ms-3">
                             <label>
                                 <input className="me-1" name="exercise_goal" type="radio" value="strength" checked={data.exercise_goal === "strength"} 
@@ -48,7 +48,7 @@ function Modal({ search, closeModal }:Props) {
                                             exercise_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Strength: <span>get stronger</span></span>
+                                <span className="modal_option">{lang === "english" ? "Strength" : "Force"}: <span>{lang === "english" ? "get stronger" : "devenir plus fort"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -60,7 +60,7 @@ function Modal({ search, closeModal }:Props) {
                                             exercise_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Hypertrophy: <span>build more muscle</span></span>
+                                <span className="modal_option">{lang === "english" ? "Hypertrophy" : "Hypertrophie"}: <span>{lang === "english" ? "build more muscle" : "développer la musculature"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -72,7 +72,7 @@ function Modal({ search, closeModal }:Props) {
                                             exercise_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Endurance: <span>increase stamina</span></span>
+                                <span className="modal_option">{lang === "english" ? "Endurance" : "Endurance"}: <span>{lang === "english" ? "increase stamina" : "augmenter l'endurance"}</span></span>
                             </label>
                         </div><div className="radio ms-3">
                             <label>
@@ -83,10 +83,10 @@ function Modal({ search, closeModal }:Props) {
                                             exercise_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Any</span>
+                                <span className="modal_option">{lang === "english" ? "Any" : "Tous"}</span>
                             </label>
                         </div>
-                        <h6 className="mt-3">Split</h6>
+                        <h6 className="mt-3">{lang === "english" ? "Split" : "Séparation"}</h6>
                         <div className="radio ms-3">
                             <label>
                                 <input className="me-1" name="split" type="radio" value="push" disabled={data.exercise_goal === "endurance"} checked={data.exercise_goal !== "endurance" && data.split === "push"} 
@@ -96,7 +96,7 @@ function Modal({ search, closeModal }:Props) {
                                             split: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Push: <span>chest, shoulders, triceps</span></span>
+                                <span className="modal_option">{lang === "english" ? "Push" : "Pousser"}: <span>{lang === "english" ? "chest, shoulders, triceps" : "poitrine, épaules, triceps"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -108,7 +108,7 @@ function Modal({ search, closeModal }:Props) {
                                             split: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Pull: <span>back, biceps, forearms</span></span>
+                                <span className="modal_option">{lang === "english" ? "Pull" : "Tirer"}: <span>{lang === "english" ? "back, biceps, forearms" : "dos, biceps, avant-bras"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -120,7 +120,7 @@ function Modal({ search, closeModal }:Props) {
                                             split: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Legs: <span>quads, hamdstrings, calves</span></span>
+                                <span className="modal_option">{lang === "english" ? "Legs" : "Jambes"}: <span>{lang === "english" ? "quads, hamdstrings, calves" : "quadriceps, ischio-jambiers, mollets"}</span></span>
                             </label>
                         </div><div className="radio ms-3">
                             <label>
@@ -131,7 +131,7 @@ function Modal({ search, closeModal }:Props) {
                                             split: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Any</span>
+                                <span className="modal_option">{lang === "english" ? "Any" : "Tous"}</span>
                             </label>
                         </div>
                         <div className="row justify-content-center mt-5">
@@ -142,15 +142,15 @@ function Modal({ search, closeModal }:Props) {
                                         search: "exercises"
                                     }))
                                 }}>
-                                <span>Find exercises</span>
+                                <span>{lang === "english" ? "Find exercises" : "Trouver des exercises"}</span>
                             </button>
                         </div>
                     </div>
                     <div className="col-6 position-relative">
                         <div className="modal_title">
-                            <h1>Find Recipes</h1>
+                            <h1>{lang === "english" ? "Find Recipes" : "Trouver des recettes"}</h1>
                         </div>
-                        <h6 className="mt-3">Dieting Goal</h6>
+                        <h6 className="mt-3">{lang === "english" ? "Dieting Goal" : "Objectif de régime"}</h6>
                         <div className="radio ms-3">
                             <label>
                                 <input className="me-1" name="dieting_goal" type="radio" value="bulking" checked={data.dieting_goal === "bulking"} 
@@ -160,7 +160,7 @@ function Modal({ search, closeModal }:Props) {
                                             dieting_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Bulking: <span>build muscle</span></span>
+                                <span className="modal_option">{lang === "english" ? "Bulking" : "Gonflage"}: <span>{lang === "english" ? "build muscle" : "développer la musculature"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -172,7 +172,7 @@ function Modal({ search, closeModal }:Props) {
                                             dieting_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Cutting: <span>lose fat</span></span>
+                                <span className="modal_option">{lang === "english" ? "Cutting" : "Coupe"}: <span>{lang === "english" ? "lose fat" : "perdre de la graisse"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -184,7 +184,7 @@ function Modal({ search, closeModal }:Props) {
                                             dieting_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Maintaining: <span>build muslce and lose fat (slower)</span></span>
+                                <span className="modal_option">{lang === "english" ? "Maintaining" : "Maintien"}: <span>{lang === "english" ? "build muslce and lose fat (slower)" : "développer la musculature et perdre de la graisse (plus lentement)"}</span></span>
                             </label>
                         </div>
                         <div className="radio ms-3">
@@ -196,7 +196,7 @@ function Modal({ search, closeModal }:Props) {
                                             dieting_goal: e.target.value
                                         }))
                                     }} />
-                                <span className="modal_option">Any</span>
+                                <span className="modal_option">{lang === "english" ? "Any" : "Tous"}</span>
                             </label>
                         </div>
                         <div className="row justify-content-center mt-5">
@@ -207,28 +207,28 @@ function Modal({ search, closeModal }:Props) {
                                         search: "recipes"
                                     }))
                                 }}>
-                                <span>Find recipes</span>
+                                <span>{lang === "english" ? "Find recipes" : "Trouver des recettes"}</span>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div className="row m-2 mb-5 gy-3">
-                    <span className="modal_resultsSpan"><h5 className="m-0 mt-2">Results</h5> (sorted by rating)</span>
+                    <span className="modal_resultsSpan"><h5 className="m-0 mt-2">{lang === "english" ? "Results" : "Résultats"}</h5> ({lang === "english" ? "sorted by rating" : "triés par note"})</span>
                     {(data.search === "exercises" && exercises.map((e) => (
                         (e.title.toLowerCase().includes(search.toLowerCase()) && (
                         (data.split === e.type || data.split === "any") &&
-                        (data.exercise_goal === "any" && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
+                        (data.exercise_goal === "any" && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />
                         ||
-                        (data.exercise_goal === "strength" && e.strength && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
+                        (data.exercise_goal === "strength" && e.strength && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
                         ||
-                        (data.exercise_goal === "hypertrophy" && e.hypertrophy && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
+                        (data.exercise_goal === "hypertrophy" && e.hypertrophy && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
                         ) ||
-                        (data.exercise_goal === "endurance" && e.endurance && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />)
+                        (data.exercise_goal === "endurance" && e.endurance && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
                         )))
                     )) || (data.search === "recipes" && recipes.map((e) => (
                         (e.title.toLowerCase().includes(search.toLowerCase()) &&
                         (data.dieting_goal === e.type || data.dieting_goal === "any") &&
-                        <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} />
+                        <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />
                         )
                     )))}
                 </div>

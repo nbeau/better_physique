@@ -5,10 +5,10 @@ interface Props {
     full: boolean;
 }
 
-function TextBox(props: Props) {
+function TextBox({ text, full }:Props) {
 
     return (
-        <p className={props.full ? "textBox_full" : "textBox"} >{props.text}</p>
+        <p className={full ? "textBox_full" : "textBox"} >{text}</p>
     );
 }
 

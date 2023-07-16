@@ -5,10 +5,10 @@ interface Props {
     centered: boolean;
 }
 
-function Text(props: Props) {
+function Text({ text, centered }:Props) {
 
     return (
-        <p className={props.centered ? "text text_centered" : "text"} >{props.text}</p>
+        <p className={centered ? "text text_centered" : "text"} >{text}</p>
     );
 }
 

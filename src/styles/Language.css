@@ -1,0 +1,9 @@
+.lang_select {
+    border: 0px;
+    background-color: #d8d8d8;
+    color: #5b280a;
+}
+
+.lang_select:focus-visible {
+    outline: none;
+}
