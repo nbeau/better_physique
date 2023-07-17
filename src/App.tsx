@@ -10,6 +10,7 @@ import Cutting from './Pages/Cutting';
 import Maintaining from './Pages/Maintaining';
 import Analysis from "./Pages/Analysis";
 import Contact from "./Pages/Contact";
+import PageNotFound from "./Pages/PageNotFound";
 import NavBar from './components/NavBar';
 import { useState } from 'react';
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/dieting/maintaining" element={<Maintaining lang={lang} />} />
         <Route path="/analysis" element={<Analysis lang={lang} />} />
         <Route path="/contact" element={<Contact lang={lang} />} />
+        <Route path="*" element={<PageNotFound lang={lang} />} />
       </Routes>
     </>
   );
