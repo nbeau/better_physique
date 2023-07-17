@@ -11,7 +11,9 @@ type FormData = {
     age: string
     height_feet: string
     height_inches: string
-    weight: string
+    height_cm: string
+    weight_lb: string
+    weight_kg: string
     activity: string
     goal: string
     cals: string
@@ -23,7 +25,9 @@ const INITIAL_DATA: FormData = {
     age: "",
     height_feet: "",
     height_inches: "",
-    weight: "",
+    height_cm: "",
+    weight_lb: "",
+    weight_kg: "",
     activity: "mid",
     goal: "maintain",
     cals: "",
@@ -32,9 +36,10 @@ const INITIAL_DATA: FormData = {
 
 interface Props {
     lang: string;
+    system: string;
 }
 
-function MultistepForm({ lang }:Props) {
+function MultistepForm({ lang, system }:Props) {
     const [data, setData] = useState(INITIAL_DATA)
     function updateFields(fields: Partial<FormData>) {
         setData(prev => {
@@ -43,7 +48,7 @@ function MultistepForm({ lang }:Props) {
     }
     const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next } =
         useMultistepForm([
-            <PhysicalForm {...data} updateFields={updateFields} lang={lang}/>,
+            <PhysicalForm {...data} updateFields={updateFields} lang={lang} system={system} />,
             <ActivityForm {...data} updateFields={updateFields} lang={lang}/>,
             <GoalForm {...data} updateFields={updateFields} lang={lang}/>,
             <Results {...data} lang={lang}/>
@@ -66,11 +71,11 @@ function MultistepForm({ lang }:Props) {
             }
             switch (data.sex) {
                 case "male": {
-                    num = 6.09 * Number(data.weight) + 146 * Number(data.height_feet) + 12.2 * Number(data.height_inches) - 5.68 * Number(data.age) + 88
+                    num = (system === "imperial" ? 6.09 * Number(data.weight_lb) : 13.4 * Number(data.weight_kg)) + (system === "imperial" ? 146 * Number(data.height_feet) + 12.2 * Number(data.height_inches) : 4.8 * Number(data.height_cm)) - 5.68 * Number(data.age) + 88
                     break;
                 }
                 case "female": {
-                    num = 4.2 * Number(data.weight) + 94.5 * Number(data.height_feet) + 7.87 * Number(data.height_inches) - 4.33 * Number(data.age) + 448
+                    num = (system === "imperial" ? 4.2 * Number(data.weight_lb) : 9.25 * Number(data.weight_kg)) + (system === "imperial" ? 94.5 * Number(data.height_feet) + 7.87 * Number(data.height_inches) : 3.1 * Number(data.height_cm)) - 4.33 * Number(data.age) + 448
                     break;
                 }
             }
@@ -98,7 +103,8 @@ function MultistepForm({ lang }:Props) {
             }
             num = num + diff
             updateFields({ cals: Math.round(num).toString() })
-            updateFields({ protein: Math.round(Number(data.weight) * 0.8).toString() })
+            system === "imperial" && updateFields({ protein: Math.round(Number(data.weight_lb) * 0.8).toString() })
+            system === "metric" && updateFields({ protein: Math.round(Number(data.weight_kg) * 1.76).toString() })
         }
         if (isLastStep) {
             return back()

@@ -2,12 +2,14 @@ import Header from "../components/Header";
 import Text from "../components/Text";
 import MultistepForm from "../components/MultistepForm";
 import "../styles/Analysis.css";
+import { useState } from "react";
 
 interface Props {
     lang: string;
 }
 
 function Analysis({ lang }:Props) {
+    const [system, setSystem] = useState("imperial")
 
     return (
         <>
@@ -18,8 +20,12 @@ function Analysis({ lang }:Props) {
                     "Answer these short questions to receive personalized advice for your fitness journey!" : 
                     "Répondez à ces quelques questions pour recevoir des conseils personnalisés pour votre parcours de remise en forme !"} />
                 </div>
-                <div className="col d-flex justify-content-center">
-                    <MultistepForm lang={lang} />
+                <div className="col d-flex justify-content-center mt-4">
+                    <MultistepForm lang={lang} system={system}/>
+                    <select className="system_select" name="lang" onChange={e => {setSystem(e.target.value)}}>
+                        <option value="imperial">{lang === "english" ? "Imperial" : "Impérial"}</option>
+                        <option value="metric">{lang === "english" ? "Metric" : "Métrique"}</option>
+                    </select>
                 </div>
             </div>
             

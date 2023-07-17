@@ -1,11 +1,10 @@
-3 implement screen reader accessibility
-2 add metric system for form
 1 non-existant page handling (link to home)
 3 don't use google search
 1 french card titles
 1 back button -> restart form (confirm restart)
-5 add images
+3 add images
+1 screen reader accessibility
 5 mobile responsive
 3 report
 
-estimated hours left: 24/19/14
+estimated hours left: 18/13

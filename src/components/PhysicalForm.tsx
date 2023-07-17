@@ -5,12 +5,15 @@ type PhysicalData = {
     sex: string
     height_feet: string
     height_inches: string
-    weight: string
+    height_cm: string
+    weight_lb: string
+    weight_kg: string
 }
 
 type PhysicalFormProps = PhysicalData & {
     updateFields: (fields: Partial<PhysicalData>) => void;
     lang: string;
+    system: string;
 }
 
 export function PhysicalForm({
@@ -18,9 +21,12 @@ export function PhysicalForm({
     sex,
     height_feet,
     height_inches,
-    weight,
+    height_cm,
+    weight_lb,
+    weight_kg,
     updateFields,
     lang,
+    system,
 }: PhysicalFormProps) {
     return (
         <div className="container">
@@ -62,8 +68,9 @@ export function PhysicalForm({
                 </div>
                 <div className="col-9 d-flex">
                     <div className="input_group d-flex">
-                        <input className="form_input" required min={0} type="number" placeholder={lang === "english" ? "ft" : "pieds"} value={height_feet} onChange={e => updateFields({ height_feet: e.target.value })} />
-                        <input className="form_input" required min={0} max={11} type="number" placeholder={lang === "english" ? "in" : "pouces"} value={height_inches} onChange={e => updateFields({ height_inches: e.target.value })} />
+                        {system === "imperial" && <input className="form_input" required min={0} type="number" placeholder={lang === "english" ? "ft" : "pieds"} value={height_feet} onChange={e => updateFields({ height_feet: e.target.value })} />
+                        && <input className="form_input" required min={0} max={11} type="number" placeholder={lang === "english" ? "in" : "pouces"} value={height_inches} onChange={e => updateFields({ height_inches: e.target.value })} />}
+                        {system === "metric" && <input className="form_input" required min={0} type="number" placeholder="cm" value={height_cm} onChange={e => updateFields({ height_cm: e.target.value})} />}
                     </div>
                 </div>
             </div>
@@ -72,7 +79,8 @@ export function PhysicalForm({
                     <label>{lang === "english" ? "weight" : "poids"}</label>
                 </div>
                 <div className="col-9 d-flex">
-                    <input className="form_input" required min={1} type="number" placeholder={lang === "english" ? "lbs" : "livres"} value={weight} onChange={e => updateFields({ weight: e.target.value })} />
+                    {system === "imperial" && <input className="form_input" required min={1} type="number" placeholder={lang === "english" ? "lbs" : "livres"} value={weight_lb} onChange={e => updateFields({ weight_lb: e.target.value })} />}
+                    {system === "metric" && <input className="form_input" required min={1} type="number" placeholder="kg" value={weight_kg} onChange={e => updateFields({ weight_kg: e.target.value })} />}
                 </div>
             </div>
         </div>
