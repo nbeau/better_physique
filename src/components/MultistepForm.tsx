@@ -46,7 +46,7 @@ function MultistepForm({ lang, system }:Props) {
             return { ...prev, ...fields }
         })
     }
-    const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next } =
+    const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next, reset } =
         useMultistepForm([
             <PhysicalForm {...data} updateFields={updateFields} lang={lang} system={system} />,
             <ActivityForm {...data} updateFields={updateFields} lang={lang}/>,
@@ -107,7 +107,20 @@ function MultistepForm({ lang, system }:Props) {
             system === "metric" && updateFields({ protein: Math.round(Number(data.weight_kg) * 1.76).toString() })
         }
         if (isLastStep) {
-            return back()
+            updateFields({ 
+            sex: "male",
+            age: "",
+            height_feet: "",
+            height_inches: "",
+            height_cm: "",
+            weight_lb: "",
+            weight_kg: "",
+            activity: "mid",
+            goal: "maintain",
+            cals: "",
+            protein: "",
+            });
+            return reset()
         }
         return next()
 }
@@ -129,7 +142,7 @@ return (
                 </div>
                 <button className="form_button" type="submit">
                     <span>
-                        {isLastStep ? (lang === "english" ? "Back" : "Retour") : (isThirdStep ? (lang === "english" ? "Submit" : "Soumettre") : (lang === "english" ? "Next" : "Prochain"))}
+                        {isLastStep ? (lang === "english" ? "Reset" : "Remise") : (isThirdStep ? (lang === "english" ? "Submit" : "Soumettre") : (lang === "english" ? "Next" : "Prochain"))}
                     </span>
                 </button>
             </div>
