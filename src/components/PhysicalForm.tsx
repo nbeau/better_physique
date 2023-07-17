@@ -68,8 +68,11 @@ export function PhysicalForm({
                 </div>
                 <div className="col-9 d-flex">
                     <div className="input_group d-flex">
-                        {system === "imperial" && <input className="form_input" required min={0} type="number" placeholder={lang === "english" ? "ft" : "pieds"} value={height_feet} onChange={e => updateFields({ height_feet: e.target.value })} />
-                        && <input className="form_input" required min={0} max={11} type="number" placeholder={lang === "english" ? "in" : "pouces"} value={height_inches} onChange={e => updateFields({ height_inches: e.target.value })} />}
+                        {system === "imperial" && 
+                        <>
+                            <input className="form_input" required min={0} type="number" placeholder={lang === "english" ? "ft" : "pieds"} value={height_feet} onChange={e => updateFields({ height_feet: e.target.value })} />
+                            <input className="form_input" required min={0} max={11} type="number" placeholder={lang === "english" ? "in" : "pouces"} value={height_inches} onChange={e => updateFields({ height_inches: e.target.value })} />
+                        </>}
                         {system === "metric" && <input className="form_input" required min={0} type="number" placeholder="cm" value={height_cm} onChange={e => updateFields({ height_cm: e.target.value})} />}
                     </div>
                 </div>
