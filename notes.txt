@@ -1,9 +1,8 @@
-3 don't use google search
-1 french card titles
 1 back button -> restart form (confirm restart)
 3 add images
+3 don't use google search
 1 screen reader accessibility
 5 mobile responsive
 3 report
 
-estimated hours left: 17/12
+estimated hours left: 16/11

@@ -21,6 +21,7 @@ import shrimp_ceasar_salad from "../images/spicy_shrimp_spinach_ceasar_salad.png
 export const recipes = [
     {
         title: "Roasted Salmon with Spicy Cranberry Relish",
+        title_fr: "Saumon rôti avec relish épicé aux canneberges",
         img: spicy_cranberry_salmon,
         rating: 5,
         rating_num: 4.8,
@@ -28,6 +29,7 @@ export const recipes = [
     },
     {
         title: "Lamb of Gains",
+        title_fr: "Agneau des gains",
         img: lamb_of_gains,
         rating: 5,
         rating_num: 1.2,
@@ -35,6 +37,7 @@ export const recipes = [
     },
     {
         title: "Cheesy Chicken Empanada Pasta",
+        title_fr: "Pâtes empanadas au poulet et au fromage",
         img: chicken_empinada,
         rating: 5,
         rating_num: 3.9,
@@ -42,6 +45,7 @@ export const recipes = [
     },
     {
         title: "Salmon Piccata",
+        title_fr: "Saumon Piccata",
         img: salmon_piccata,
         rating: 5,
         rating_num: 3.6,
@@ -49,6 +53,7 @@ export const recipes = [
     },
     {
         title: "Lemon Asparagus Pasta with Grilled Chicken",
+        title_fr: "Pâtes aux asperges et au citron avec du poulet grillé",
         img: lemon_chicken_pasta,
         rating: 4,
         rating_num: 2.3,
@@ -56,6 +61,7 @@ export const recipes = [
     },
     {
         title: "Feta & Roasted Red Pepper Stuffed Chicken",
+        title_fr: "Poulet farci à la feta et aux poivrons rouges grillés",
         img: stuffed_chicken,
         rating: 4,
         rating_num: 3.7,
@@ -63,6 +69,7 @@ export const recipes = [
     },
     {
         title: "Air-fryer Pork Chops",
+        title_fr: "Côtelettes de porc au four à micro-ondes",
         img: pork_chops,
         rating: 4,
         rating_num: 2.2,
@@ -70,6 +77,7 @@ export const recipes = [
     },
     {
         title: "One Pot Chili Pasta",
+        title_fr: "Pâtes au chili en une seule casserole",
         img: chili_pasta,
         rating: 4,
         rating_num: 1.8,
@@ -77,6 +85,7 @@ export const recipes = [
     },
     {
         title: "Spicy Shrimp Spinach Ceasar Salad",
+        title_fr: "Salade Ceasar aux épinards et aux crevettes épicées",
         img: shrimp_ceasar_salad,
         rating: 3,
         rating_num: 1.0,

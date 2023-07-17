@@ -55,7 +55,7 @@ function Cutting({ lang }:Props) {
             </div>
             <div className="row m-2 mb-5 gy-3">
                 {recipes.map((e, index) => (
-                    e.type === "cutting" && <Card key={index} title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang}/>
+                    e.type === "cutting" && <Card key={index} title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang}/>
                 ))}
             </div>
         </>

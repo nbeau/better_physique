@@ -217,18 +217,18 @@ function Modal({ search, closeModal, lang }:Props) {
                     {(data.search === "exercises" && exercises.map((e) => (
                         (e.title.toLowerCase().includes(search.toLowerCase()) && (
                         (data.split === e.type || data.split === "any") &&
-                        (data.exercise_goal === "any" && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />
+                        (data.exercise_goal === "any" && <Card title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />
                         ||
-                        (data.exercise_goal === "strength" && e.strength && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
+                        (data.exercise_goal === "strength" && e.strength && <Card title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
                         ||
-                        (data.exercise_goal === "hypertrophy" && e.hypertrophy && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
+                        (data.exercise_goal === "hypertrophy" && e.hypertrophy && <Card title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
                         ) ||
-                        (data.exercise_goal === "endurance" && e.endurance && <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
+                        (data.exercise_goal === "endurance" && e.endurance && <Card title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />)
                         )))
                     )) || (data.search === "recipes" && recipes.map((e) => (
                         (e.title.toLowerCase().includes(search.toLowerCase()) &&
                         (data.dieting_goal === e.type || data.dieting_goal === "any") &&
-                        <Card title={e.title} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />
+                        <Card title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang} />
                         )
                     )))}
                 </div>

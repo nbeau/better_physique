@@ -26,6 +26,7 @@ import jump_rope from "../images/jump_rope.jpeg";
 export const exercises = [
     {
         title: "Bench Press",
+        title_fr: "Développé couché",
         img: benchpress,
         rating: 5,
         rating_num: 5.6,
@@ -36,6 +37,7 @@ export const exercises = [
     },
     {
         title: "Squat",
+        title_fr: "Squat",
         img: squat,
         rating: 5,
         rating_num: 4.3,
@@ -46,6 +48,7 @@ export const exercises = [
     },
     {
         title: "Dumbell curl",
+        title_fr: "Flexion des haltères",
         img: dumbell_curl,
         rating: 5,
         rating_num: 6.2,
@@ -55,7 +58,8 @@ export const exercises = [
         type: "pull",
     },
     {
-        title: "jump-rope",
+        title: "Jump-rope",
+        title_fr: "Corde à sauter",
         img: jump_rope,
         rating: 4,
         rating_num: 1.1,
@@ -66,6 +70,7 @@ export const exercises = [
     },
     {
         title: "Chin-ups",
+        title_fr: "Pompes à main",
         img: chin_up,
         rating: 4,
         rating_num: 6.9,
@@ -75,7 +80,8 @@ export const exercises = [
         type: "pull",
     },
     {
-        title: "swimming",
+        title: "Swimming",
+        title_fr: "Natation",
         img: swimming,
         rating: 4,
         rating_num: 1.3,
@@ -86,6 +92,7 @@ export const exercises = [
     },
     {
         title: "Lateral Raises",
+        title_fr: "Elévations latérales",
         img: lateral_raise,
         rating: 4,
         rating_num: 4.1,
@@ -96,6 +103,7 @@ export const exercises = [
     },
     {
         title: "Bent over rows",
+        title_fr: "Rameaux pliés",
         img: bent_over_row,
         rating: 4,
         rating_num: 3.1,
@@ -106,6 +114,7 @@ export const exercises = [
     },
     {
         title: "Tricep extension",
+        title_fr: "Extension du triceps",
         img: tricep_extension,
         rating: 3,
         rating_num: 2.7,
@@ -116,6 +125,7 @@ export const exercises = [
     },
     {
         title: "Military Press",
+        title_fr: "Presse militaire",
         img: military_press,
         rating: 3,
         rating_num: 1.8,
@@ -126,6 +136,7 @@ export const exercises = [
     },
     {
         title: "Deadlift",
+        title_fr: "Levée de terre",
         img: deadlift,
         rating: 3,
         rating_num: 3.6,
@@ -135,7 +146,8 @@ export const exercises = [
         type: "legs",
     },
     {
-        title: "running",
+        title: "Running",
+        title_fr: "La course à pied",
         img: running,
         rating: 3,
         rating_num: 3.8,

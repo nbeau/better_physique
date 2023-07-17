@@ -8,10 +8,11 @@ interface Props {
     rating: number;
     rating_num: number;
     title: string;
+    title_fr: string;
     lang: string;
 }
 
-function Card({ img, rating, rating_num, title, lang }:Props) {
+function Card({ img, rating, rating_num, title, title_fr, lang }:Props) {
     const [value, setValue] = React.useState<number | null>(rating);
 
 
@@ -26,7 +27,7 @@ function Card({ img, rating, rating_num, title, lang }:Props) {
                             &ensp;{rating_num}k
                         </div>
                     </span>
-                    <h5 className="mb-0 card_title">{title}</h5>
+                    <h5 className="mb-0 card_title">{lang === "english" ? title : title_fr}</h5>
                 </div>
                 <div className="mt-auto px-2 mb-2" >
                     <hr className="m-0 mb-1"></hr>
