@@ -16,8 +16,8 @@ function Home({ lang }:Props) {
             <Header heading={lang === "english" ? "Build a Better Physique" : "Construire un meilleur corps"} lang={lang} />
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-6 d-flex justify-content-center">
-                        <img src={arnold} className="home_arnold" alt="arnold" />
+                    <div className="arnold_container col-6 d-flex justify-content-center">
+                        <img src={arnold} className="home_arnold" alt="Arnold Schwarzenegger Flexing" />
                     </div>
                     <div className="col-6">
                         <TextBox full={false} text={lang === "english" ?

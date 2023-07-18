@@ -9,11 +9,14 @@
     padding-right: 25px !important;
 }
 
+.arnold_container {
+    position: relative;
+}
+
 .home_arnold {
     position:absolute;
-    width: 500px;;
-    max-height: 800px;
-    top: 300px;
+    width: 50%;
+    top: 0px;
     bottom:0%;
     object-fit:cover;
     object-position: center top;

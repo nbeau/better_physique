@@ -22,7 +22,7 @@ function Analysis({ lang }:Props) {
                 </div>
                 <div className="col d-flex justify-content-center mt-4">
                     <MultistepForm lang={lang} system={system}/>
-                    <select className="system_select" name="lang" onChange={e => {setSystem(e.target.value)}}>
+                    <select className="system_select" name="lang" aria-label="Imperial/Metric select" onChange={e => {setSystem(e.target.value)}}>
                         <option value="imperial">{lang === "english" ? "Imperial" : "Impérial"}</option>
                         <option value="metric">{lang === "english" ? "Metric" : "Métrique"}</option>
                     </select>

@@ -58,7 +58,7 @@ export function PhysicalForm({
                 </div>
                 <div className="col-9 d-flex">
                     <div className="input_group d-flex">
-                        <input className="form_input" required min={0} type="number" placeholder="0" value={age} onChange={e => updateFields({ age: e.target.value })} />
+                        <input className="form_input" required min={0} type="number" placeholder="0" aria-label="Age input" value={age} onChange={e => updateFields({ age: e.target.value })} />
                     </div>
                 </div>
             </div>
@@ -70,10 +70,10 @@ export function PhysicalForm({
                     <div className="input_group d-flex">
                         {system === "imperial" && 
                         <>
-                            <input className="form_input" required min={0} type="number" placeholder={lang === "english" ? "ft" : "pieds"} value={height_feet} onChange={e => updateFields({ height_feet: e.target.value })} />
-                            <input className="form_input" required min={0} max={11} type="number" placeholder={lang === "english" ? "in" : "pouces"} value={height_inches} onChange={e => updateFields({ height_inches: e.target.value })} />
+                            <input className="form_input" required min={0} type="number" placeholder={lang === "english" ? "ft" : "pieds"} aria-label="height (feet)" value={height_feet} onChange={e => updateFields({ height_feet: e.target.value })} />
+                            <input className="form_input" required min={0} max={11} type="number" placeholder={lang === "english" ? "in" : "pouces"} aria-label="height (inches)" value={height_inches} onChange={e => updateFields({ height_inches: e.target.value })} />
                         </>}
-                        {system === "metric" && <input className="form_input" required min={0} type="number" placeholder="cm" value={height_cm} onChange={e => updateFields({ height_cm: e.target.value})} />}
+                        {system === "metric" && <input className="form_input" required min={0} type="number" placeholder="cm" aria-label="height (cm)" value={height_cm} onChange={e => updateFields({ height_cm: e.target.value})} />}
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@ export function PhysicalForm({
                     <label>{lang === "english" ? "weight" : "poids"}</label>
                 </div>
                 <div className="col-9 d-flex">
-                    {system === "imperial" && <input className="form_input" required min={1} type="number" placeholder={lang === "english" ? "lbs" : "livres"} value={weight_lb} onChange={e => updateFields({ weight_lb: e.target.value })} />}
-                    {system === "metric" && <input className="form_input" required min={1} type="number" placeholder="kg" value={weight_kg} onChange={e => updateFields({ weight_kg: e.target.value })} />}
+                    {system === "imperial" && <input className="form_input" required min={1} type="number" aria-label="weight (pounds)" placeholder={lang === "english" ? "lbs" : "livres"} value={weight_lb} onChange={e => updateFields({ weight_lb: e.target.value })} />}
+                    {system === "metric" && <input className="form_input" required min={1} type="number" aria-label="weight (kilogrammes)" placeholder="kg" value={weight_kg} onChange={e => updateFields({ weight_kg: e.target.value })} />}
                 </div>
             </div>
         </div>

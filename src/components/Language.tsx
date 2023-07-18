@@ -8,7 +8,7 @@ interface Props {
 function Language({ lang, setLang }:Props) {
     return (
         <>
-            <select className="lang_select" name="lang" onChange={e => {setLang(e.target.value)}}>
+            <select className="lang_select" name="lang" aria-label="language select" onChange={e => {setLang(e.target.value)}}>
                 <option value="english">English</option>
                 <option value="french">Français</option>
             </select>

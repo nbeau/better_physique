@@ -1,0 +1,14 @@
+.pushup_container {
+    position:fixed;
+    right: 100px;
+    top: 200px;
+    margin-top: -50px;
+    z-index: 5;
+}
+
+.pushup_img {
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center bottom;
+}

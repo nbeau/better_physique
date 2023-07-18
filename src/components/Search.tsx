@@ -13,7 +13,7 @@ function Search({ lang }:Props) {
     return (
         <>
         <div className="search">
-            <input placeholder={lang === "english" ? "Find Exercises or Recipes" : "Recherche d'exercices ou de recettes"} onChange={e => setSearch(e.target.value)} onClick={() => {setOpenModal(true)}}></input>
+            <input aria-label="search for exercises or diets (click to open)" placeholder={lang === "english" ? "Find Exercises or Recipes" : "Recherche d'exercices ou de recettes"} onChange={e => setSearch(e.target.value)} onClick={() => {setOpenModal(true)}}></input>
             <div className="search_icon">
                 <i className="fa fa-search"></i>
             </div>

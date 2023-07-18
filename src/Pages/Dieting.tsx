@@ -3,6 +3,7 @@ import TextBox from "../components/TextBox";
 import Text from "../components/Text";
 import Button from "../components/Button";
 import "../styles/Dieting.css";
+import food from "../images/food.png";
 
 interface Props {
     lang: string;
@@ -11,9 +12,8 @@ function Dieting({ lang }:Props) {
     return (
         <>
             <Header heading={lang === "english" ? "Dieting" : "Régime"} lang={lang} />
-            <div className="container">
-                <div className="row p-3">
-                </div>
+            <div className="d-flex flex-row justify-content-end food_container">
+                <img src={food} className="food_img" alt="Image of food"></img>
             </div>
             <TextBox full={true} text={lang === "english" ?
                 "The purpose of dieting is to control your weight and health. Whether you want to gain or lose weight, you have to consider the laws of thermodynamics. Your body requires a certain amount of energy in order to function, this energy is measured with Calories. If you consume more Calories than your body requires, you will gain weight, if you consume fewer Calories than your body requires, you will lose weight. Whether you gain or lose weight (muscle or fat) depends on what food you're eating and what exercise you're doing. All diets that actually work are dependant on counting Calories. There is no such thing as a secret diet to lose weight fast. To learn about the types of diets, see below." :

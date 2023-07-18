@@ -3,6 +3,7 @@ import TextBox from "../components/TextBox";
 import Text from "../components/Text";
 import Button from "../components/Button";
 import "../styles/Training.css";
+import pushup from "../images/pushup.png";
 
 interface Props {
     lang: string;
@@ -11,7 +12,9 @@ function Training({ lang }:Props) {
     return (
         <>
             <Header heading={lang === "english" ? "Training" : "Entrainement"} lang={lang} />
-            <div className="row p-3"></div>
+            <div className="d-flex flex-row justify-content-end pushup_container">
+                <img src={pushup} className="pushup_img" alt="pushup"></img>
+            </div>
             <TextBox full={true} text={lang === "english" ?
                 "The goal of exercising is to push your body to its limit. By doing difficult exercises properly, you are forcing your body to adapt. This is how you get stronger, build muscle, and increase your stamina. Different types of exercises will have different results. For example: lifting weight can make you stronger and more muscular, while running can increase your stamina. To learn more about the different types of workouts, see below." :
                 "Le but de l'exercice est de pousser le corps à ses limites. En effectuant correctement des exercices difficiles, vous obligez votre corps à s'adapter. C'est ainsi que vous devenez plus fort, que vous développez vos muscles et que vous augmentez votre endurance. Différents types d'exercices donnent des résultats différents. Par exemple, soulever des poids peut vous rendre plus fort et plus musclé, tandis que la course à pied peut augmenter votre endurance. Pour en savoir plus sur les différents types d'exercices, voir ci-dessous."}

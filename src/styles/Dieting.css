@@ -1,0 +1,13 @@
+.food_container {
+    position:fixed;
+    right: 75px;
+    top: 215px;
+    margin-top: -50px;
+    z-index: 5;
+}
+
+.food_img {
+    height: 85px;
+    width: 300px;
+    object-fit: cover;
+}
