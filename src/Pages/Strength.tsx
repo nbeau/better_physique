@@ -50,7 +50,7 @@ function Strength({ lang }:Props) {
             </div>
             <div className="row m-2 mb-5 gy-3">
                 {exercises.map((e, index) => (
-                    e.strength && <Card key={index} title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} lang={lang}/>
+                    e.strength && <Card key={index} title={e.title} title_fr={e.title_fr} img={e.img} rating={e.rating} rating_num={e.rating_num} link={e.link} lang={lang}/>
                 ))}
             </div>
         </>

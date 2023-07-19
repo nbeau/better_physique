@@ -34,6 +34,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "push",
+        link: "https://www.youtube.com/watch?v=gRVjAtPip0Y",
     },
     {
         title: "Squat",
@@ -45,6 +46,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "legs",
+        link: "https://www.youtube.com/watch?v=gcNh17Ckjgg",
     },
     {
         title: "Dumbell curl",
@@ -56,6 +58,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "pull",
+        link: "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
     },
     {
         title: "Jump-rope",
@@ -67,6 +70,7 @@ export const exercises = [
         hypertrophy: false,
         endurance: true,
         type: "endurance",
+        link: "https://www.youtube.com/watch?v=FJmRQ5iTXKE",
     },
     {
         title: "Chin-ups",
@@ -78,6 +82,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "pull",
+        link: "https://www.youtube.com/watch?v=brhRXlOhsAM",
     },
     {
         title: "Swimming",
@@ -89,6 +94,7 @@ export const exercises = [
         hypertrophy: false,
         endurance: true,
         type: "endurance",
+        link: "https://www.youtube.com/watch?v=oM4sHl1hTEE",
     },
     {
         title: "Lateral Raises",
@@ -100,6 +106,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "push",
+        link: "https://www.youtube.com/watch?v=b_LEX4n9lOs",
     },
     {
         title: "Bent over rows",
@@ -111,6 +118,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "pull",
+        link: "https://www.youtube.com/watch?v=FWJR5Ve8bnQ",
     },
     {
         title: "Tricep extension",
@@ -122,6 +130,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "push",
+        link: "https://www.youtube.com/watch?v=_gsUck-7M74",
     },
     {
         title: "Military Press",
@@ -133,6 +142,7 @@ export const exercises = [
         hypertrophy: true,
         endurance: false,
         type: "push",
+        link: "https://www.youtube.com/watch?v=KP1sYz2VICk",
     },
     {
         title: "Deadlift",
@@ -144,6 +154,7 @@ export const exercises = [
         hypertrophy: false,
         endurance: false,
         type: "legs",
+        link: "https://www.youtube.com/watch?v=r4MzxtBKyNE",
     },
     {
         title: "Running",
@@ -155,5 +166,6 @@ export const exercises = [
         hypertrophy: false,
         endurance: true,
         type: "endurance",
+        link: "https://www.youtube.com/watch?v=28KR2wmGGh0",
     },
 ]

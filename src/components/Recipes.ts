@@ -7,10 +7,10 @@
         type: "",
     },
 */
-import lemon_chicken_pasta from "../images/lemon_chicken_pasta.png"; //https://www.pinterest.ca/pin/437201076316468305/
-import chili_pasta from "../images/chili_pasta.png"; //https://legionathletics.com/bulking-recipes/
-import lamb_of_gains from "../images/lamb_of_gains.png"; // ||
-import pork_chops from "../images/pork_chops.webp"; //https://www.eatingwell.com/gallery/7835714/high-protein-low-calorie-dinner-recipes/
+import lemon_chicken_pasta from "../images/lemon_chicken_pasta.png";
+import chili_pasta from "../images/chili_pasta.png"; 
+import lamb_of_gains from "../images/lamb_of_gains.png";
+import pork_chops from "../images/pork_chops.webp";
 import stuffed_chicken from "../images/stuffed_chicken.webp";
 import spicy_cranberry_salmon from "../images/spicy_cranberry_salmon.webp";
 import chicken_empinada from "../images/cheesy_chicken_empinada_pasta.png"; //https://www.self.com/gallery/10-high-protein-dinners-you-can-make-in-20-minutes-or-less
@@ -26,6 +26,7 @@ export const recipes = [
         rating: 5,
         rating_num: 4.8,
         type: "cutting",
+        link: "https://www.eatingwell.com/recipe/277167/roasted-salmon-with-spicy-cranberry-relish/",
     },
     {
         title: "Lamb of Gains",
@@ -34,6 +35,7 @@ export const recipes = [
         rating: 5,
         rating_num: 1.2,
         type: "bulking",
+        link: "https://legionathletics.com/bulking-recipes/",
     },
     {
         title: "Cheesy Chicken Empanada Pasta",
@@ -42,6 +44,7 @@ export const recipes = [
         rating: 5,
         rating_num: 3.9,
         type: "maintaining",
+        link: "https://www.simplylakita.com/cheesy-chicken-enchilada-pasta/",
     },
     {
         title: "Salmon Piccata",
@@ -50,6 +53,7 @@ export const recipes = [
         rating: 5,
         rating_num: 3.6,
         type: "maintaining",
+        link: "https://cafedelites.com/easy-salmon-piccata/",
     },
     {
         title: "Lemon Asparagus Pasta with Grilled Chicken",
@@ -58,6 +62,7 @@ export const recipes = [
         rating: 4,
         rating_num: 2.3,
         type: "bulking",
+        link: "https://www.pinterest.ca/pin/437201076316468305/",
     },
     {
         title: "Feta & Roasted Red Pepper Stuffed Chicken",
@@ -66,6 +71,7 @@ export const recipes = [
         rating: 4,
         rating_num: 3.7,
         type: "cutting",
+        link: "https://www.eatingwell.com/recipe/277510/feta-roasted-red-pepper-stuffed-chicken-breasts/",
     },
     {
         title: "Air-fryer Pork Chops",
@@ -74,6 +80,7 @@ export const recipes = [
         rating: 4,
         rating_num: 2.2,
         type: "cutting",
+        link: "https://www.eatingwell.com/recipe/277565/air-fryer-pork-chops/",
     },
     {
         title: "One Pot Chili Pasta",
@@ -82,6 +89,7 @@ export const recipes = [
         rating: 4,
         rating_num: 1.8,
         type: "bulking",
+        link: "https://legionathletics.com/bulking-recipes/",
     },
     {
         title: "Spicy Shrimp Spinach Ceasar Salad",
@@ -90,5 +98,6 @@ export const recipes = [
         rating: 3,
         rating_num: 1.0,
         type: "maintaining",
+        link: "https://www.cottercrunch.com/spicy-shrimp-caesar-spinach-salad/",
     },
 ]

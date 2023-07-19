@@ -10,9 +10,10 @@ interface Props {
     title: string;
     title_fr: string;
     lang: string;
+    link: string;
 }
 
-function Card({ img, rating, rating_num, title, title_fr, lang }:Props) {
+function Card({ img, rating, rating_num, title, title_fr, lang, link }:Props) {
     const [value, setValue] = React.useState<number | null>(rating);
 
 
@@ -32,7 +33,7 @@ function Card({ img, rating, rating_num, title, title_fr, lang }:Props) {
                 <div className="mt-auto px-2 mb-2" >
                     <hr className="m-0 mb-1"></hr>
                     <div className="d-flex justify-content-center">
-                        <Link className="card_link" to={"https://www.google.com/search?q=" + title} target="_blank">{lang === "english" ? "details" : "détails"}</Link>
+                        <Link className="card_link" to={link} target="_blank">{lang === "english" ? "details" : "détails"}</Link>
                     </div>
                 </div>
             </div>
