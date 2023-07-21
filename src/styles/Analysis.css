@@ -5,11 +5,3 @@
 .text_centered {
     font-size: 20px;
 }
-
-.system_select {
-    width: 100px;
-    height: 25px;
-    margin-left: -150px;
-    margin-top: -10px;
-    z-index: 5;
-}

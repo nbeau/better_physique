@@ -1,5 +1,0 @@
-3 report
-1 confirm restart
-2 better resizing
-
-estimated hours left: 8

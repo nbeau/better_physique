@@ -9,7 +9,6 @@ interface Props {
 }
 
 function Analysis({ lang }:Props) {
-    const [system, setSystem] = useState("imperial")
 
     return (
         <>
@@ -21,11 +20,7 @@ function Analysis({ lang }:Props) {
                     "Répondez à ces quelques questions pour recevoir des conseils personnalisés pour votre parcours de remise en forme !"} />
                 </div>
                 <div className="col d-flex justify-content-center mt-4">
-                    <MultistepForm lang={lang} system={system}/>
-                    <select className="system_select" name="lang" aria-label="Imperial/Metric select" onChange={e => {setSystem(e.target.value)}}>
-                        <option value="imperial">{lang === "english" ? "Imperial" : "Impérial"}</option>
-                        <option value="metric">{lang === "english" ? "Metric" : "Métrique"}</option>
-                    </select>
+                    <MultistepForm lang={lang} />
                 </div>
             </div>
             

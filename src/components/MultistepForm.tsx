@@ -36,11 +36,12 @@ const INITIAL_DATA: FormData = {
 
 interface Props {
     lang: string;
-    system: string;
 }
 
-function MultistepForm({ lang, system }:Props) {
+function MultistepForm({ lang }:Props) {
     const [data, setData] = useState(INITIAL_DATA)
+    const [system, setSystem] = useState("imperial")
+
     function updateFields(fields: Partial<FormData>) {
         setData(prev => {
             return { ...prev, ...fields }
@@ -48,7 +49,7 @@ function MultistepForm({ lang, system }:Props) {
     }
     const { steps, currentStepIndex, step, isFirstStep, isThirdStep, isLastStep, back, next, reset } =
         useMultistepForm([
-            <PhysicalForm {...data} updateFields={updateFields} lang={lang} system={system} />,
+            <PhysicalForm {...data} updateFields={updateFields} lang={lang} system={system} setSystem={setSystem} />,
             <ActivityForm {...data} updateFields={updateFields} lang={lang}/>,
             <GoalForm {...data} updateFields={updateFields} lang={lang}/>,
             <Results {...data} lang={lang}/>

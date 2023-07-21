@@ -14,6 +14,7 @@ type PhysicalFormProps = PhysicalData & {
     updateFields: (fields: Partial<PhysicalData>) => void;
     lang: string;
     system: string;
+    setSystem: Function;
 }
 
 export function PhysicalForm({
@@ -27,12 +28,18 @@ export function PhysicalForm({
     updateFields,
     lang,
     system,
+    setSystem,
 }: PhysicalFormProps) {
+    
     return (
         <div className="container">
             <div className="row">
                 <h2>{lang === "english" ? "Step 1: Physical Data" : "Étape 1 : Données physiques"}</h2>
             </div>
+            <select className="system_select" name="lang" aria-label="Imperial/Metric select" onChange={e => {setSystem(e.target.value)}}>
+                        <option value="imperial">{lang === "english" ? "Imperial" : "Impérial"}</option>
+                        <option value="metric">{lang === "english" ? "Metric" : "Métrique"}</option>
+                    </select>
             <div className="row mt-4">
                 <div className="col-3 d-flex flex-row justify-content-end">
                     <label>{lang === "english" ? "sex" : "sexe"}</label>
